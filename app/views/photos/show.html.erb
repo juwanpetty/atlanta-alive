@@ -1,4 +1,10 @@
 <p>
+  <% if @photo.image %>
+    <%= image_tag @photo.image.url(:medium) %>
+  <% end %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @photo.location %>
 </p>

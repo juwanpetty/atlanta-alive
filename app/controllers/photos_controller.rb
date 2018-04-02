@@ -25,7 +25,7 @@ class PhotosController < ApplicationController
     end
 
     def update
-        if @photo.save
+        if @photo.update photo_params
             redirect_to @photo, notice: "Photo saved successfully"
         else 
             render 'edit'
@@ -40,7 +40,7 @@ class PhotosController < ApplicationController
     private
 
     def photo_params
-        params.require(:photo).permit(:location, :description)
+        params.require(:photo).permit(:location, :description, :image)
     end
 
     def find_photo 
