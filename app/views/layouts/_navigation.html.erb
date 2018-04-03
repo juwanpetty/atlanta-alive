@@ -15,11 +15,14 @@
             </div>
         <% end %>
 
-
         <div class="navigation__links">
-            <a href="#" class="navigation__links__item">Twitter</a>
-            <a href="#" class="navigation__links__item">Instagram</a>
-            <a href="#" class="navigation__links__item navigation__links__item--last">Facebook</a>
+            <% if user_signed_in? %>
+                <%= link_to('logout', destroy_user_session_path, class: 'navigation__links__item', method: :delete) %>
+            <% else %>
+                <a href="#" class="navigation__links__item">Twitter</a>
+                <a href="#" class="navigation__links__item">Instagram</a>
+                <a href="#" class="navigation__links__item navigation__links__item--last">Facebook</a>
+            <% end %>
         </div>
     </div>
 </nav>
