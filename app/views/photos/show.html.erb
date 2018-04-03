@@ -14,6 +14,7 @@
   <%= @photo.description %>
 </p>
 
+<%= link_to 'Back', photos_path() %>
 <%= link_to 'Edit', edit_photo_path(@photo) %>
 <%= link_to 'Delete', photo_path(@photo), method: :delete, 
                                           data: {confirm: "Are sure you want to delete this photo?"} %>

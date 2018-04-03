@@ -1,1 +1,22 @@
-Photos Index
+<h1>Listing articles</h1>
+
+<p><%= link_to 'New', new_photo_path() %></p>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @photos.each do |photo| %>
+    <tr>
+    <% if photo.image %>
+        <td><%= image_tag photo.image.url(:medium) %></td>
+    <% end %>
+      
+      <td><%= photo.location %></td>
+      <td><%= photo.description %></td>
+      <td><%= link_to 'Show', photo_path(photo) %></td>
+    </tr>
+  <% end %>
+</table>

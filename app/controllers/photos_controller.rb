@@ -2,6 +2,7 @@ class PhotosController < ApplicationController
     before_action :find_photo, only: [:show, :edit, :update, :destroy]
 
     def index
+        @photos = Photo.all
     end
 
     def new 
@@ -34,7 +35,7 @@ class PhotosController < ApplicationController
 
     def destroy
         @photo.destroy
-        redirect_to photo_path
+        redirect_to photos_path
     end
 
     private
