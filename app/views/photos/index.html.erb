@@ -1,22 +1,9 @@
-<h1>Listing articles</h1>
-
-<p><%= link_to 'New', new_photo_path() %></p>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @photos.each do |photo| %>
-    <tr>
-    <% if photo.image %>
-        <td><%= image_tag photo.image.url(:medium) %></td>
+<section class="all-feed">
+  <ul class="all-feed__list">
+    <% @photos.each do |photo| %>
+      <li class="all-feed__list__item">
+        <%= link_to image_tag(photo.image.url()), photo_path(photo) %>
+      </li>
     <% end %>
-      
-      <td><%= photo.location %></td>
-      <td><%= photo.description %></td>
-      <td><%= link_to 'Show', photo_path(photo) %></td>
-    </tr>
-  <% end %>
-</table>
+  </ul>
+</section>
