@@ -1,7 +1,7 @@
 <nav class="navigation">
     <div class="navigation__wrapper">
         
-        <% if (current_page?(controller: 'photos', action: 'show')) %>
+        <% if (params[:controller] == 'photos' && params[:action] == 'show') %>
             <a href="index.html">
                 <div class="icon-wrapper">
                     <i data-feather="arrow-left"></i>
@@ -9,7 +9,9 @@
             </a>
         <% else %>
             <div class="navigation__logo">
-                <a href="#"><h1>Atlanta Alive</h1></a>
+                <%= link_to(root_path) do %>
+                    <h1>Atlanta Alive</h1>
+                <% end %>
             </div>
         <% end %>
 

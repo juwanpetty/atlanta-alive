@@ -1,0 +1,14 @@
+<section class="main-feed">
+    <ul class="main-feed__list">
+    <% @photos.each do |photo| %>
+        <li class="main-feed__list__item">
+            <%= link_to image_tag(photo.image.url()), photo_path(photo) %>
+            
+            <div class="item__content">
+                <p></p>
+                <%= link_to photo.location, photo.location, class: 'item__content__location' %>
+            </div>
+        </li>
+    <% end %>
+    </ul>
+</section>
