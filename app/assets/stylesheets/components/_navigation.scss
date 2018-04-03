@@ -28,6 +28,8 @@
 
     // .naivgation__links 
     &__links {
+        @include flex(center, flex-start);
+
         // .navigation__links__item
         &__item {
             margin-right: 2rem;
@@ -45,4 +47,12 @@
             }
         }
     }
+}
+
+.hori-divider {
+    width: 1px;
+    height: 1.25rem;
+    opacity: 0.5;
+    background: $secondary-text;
+    margin-right: 1.5rem;
 }

@@ -17,7 +17,12 @@
 
         <div class="navigation__links">
             <% if user_signed_in? %>
-                <%= link_to('logout', destroy_user_session_path, class: 'navigation__links__item', method: :delete) %>
+                <%= link_to('Settings', edit_user_registration_path, class: 'navigation__links__item') %>
+                <%= link_to('Logout', destroy_user_session_path, class: 'navigation__links__item', method: :delete) %>
+
+                <div class="hori-divider"></div>
+
+                <%= link_to('Upload', new_photo_path, class: 'navigation__links__item navigation__links__item--last') %>
             <% else %>
                 <a href="#" class="navigation__links__item">Twitter</a>
                 <a href="#" class="navigation__links__item">Instagram</a>
