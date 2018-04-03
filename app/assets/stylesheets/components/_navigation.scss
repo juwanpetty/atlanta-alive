@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    pointer-events: none;
 
     // .navigation__wrapper
     &__wrapper {
@@ -21,8 +22,12 @@
             color: $primary-text;
         }
 
-        a:hover {
-            text-decoration: none;
+        a {
+            pointer-events: auto;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
@@ -34,6 +39,7 @@
         &__item {
             margin-right: 2rem;
             color: $secondary-text;
+            pointer-events: auto;
             transition: 200ms;
 
             &:hover {
