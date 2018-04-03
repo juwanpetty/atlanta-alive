@@ -1,9 +1,14 @@
+/*
+ *= require rails_bootstrap_forms
+ */
+
 // Base 
 @import 'base/normalize';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/base';
 @import 'base/typography';
+@import 'bootstrap';
 
 // Components
 @import 'components/navigation';

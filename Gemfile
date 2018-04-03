@@ -11,6 +11,11 @@ gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'paperclip', '~> 6.0.0'
 gem 'devise'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap_form",
+    git: "https://github.com/bootstrap-ruby/bootstrap_form.git",
+    branch: "master"
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
