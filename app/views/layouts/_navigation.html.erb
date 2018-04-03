@@ -1,8 +1,18 @@
 <nav class="navigation">
     <div class="navigation__wrapper">
-        <div class="navigation__logo">
-            <a href="index.html"><h1>Atlanta Alive</h1></a>
-        </div>
+        
+        <% if (current_page?(controller: 'photos', action: 'show')) %>
+            <a href="index.html">
+                <div class="icon-wrapper">
+                    <i data-feather="arrow-left"></i>
+                </div>
+            </a>
+        <% else %>
+            <div class="navigation__logo">
+                <a href="#"><h1>Atlanta Alive</h1></a>
+            </div>
+        <% end %>
+
 
         <div class="navigation__links">
             <a href="#" class="navigation__links__item">Twitter</a>
