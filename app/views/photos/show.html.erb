@@ -1,20 +1,22 @@
-<p>
-  <% if @photo.image %>
-    <%= image_tag @photo.image.url(:medium) %>
-  <% end %>
-</p>
+<section class="show__image">
+  <div class="show__image__wrapper">
+    <% if @photo.image %>
+      <%= image_tag @photo.image.url() %>
+    <% end %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @photo.location %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @photo.description %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @photo.location %>
+    </p>
+  
+    <p>
+      <strong>Text:</strong>
+      <%= @photo.description %>
+    </p>
 
-<%= link_to 'Back', photos_path() %>
-<%= link_to 'Edit', edit_photo_path(@photo) %>
-<%= link_to 'Delete', photo_path(@photo), method: :delete, 
-                                          data: {confirm: "Are sure you want to delete this photo?"} %>
+    <%= link_to 'Back', photos_path() %>
+    <%= link_to 'Edit', edit_photo_path(@photo) %>
+    <%= link_to 'Delete', photo_path(@photo), method: :delete, 
+                                              data: {confirm: "Are sure you want to delete this photo?"} %>
+  </div>
+</section>
