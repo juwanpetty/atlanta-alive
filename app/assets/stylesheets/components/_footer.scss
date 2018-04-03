@@ -19,6 +19,12 @@
         &__item {
             margin-right: 2rem;
             color: $secondary-text;
+            transition: 200ms;
+
+            &:hover {
+                text-decoration: none;
+                color: $primary-text;
+            }
 
             &--last {
                 margin-right: 0;

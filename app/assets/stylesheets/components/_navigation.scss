@@ -20,6 +20,10 @@
             font-weight: 500;
             color: $primary-text;
         }
+
+        a:hover {
+            text-decoration: none;
+        }
     }
 
     // .naivgation__links 
@@ -28,6 +32,12 @@
         &__item {
             margin-right: 2rem;
             color: $secondary-text;
+            transition: 200ms;
+
+            &:hover {
+                text-decoration: none;
+                color: $primary-text;
+            }
 
             // .navigation__links__items--last
             &--last {
