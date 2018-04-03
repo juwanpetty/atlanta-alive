@@ -1,0 +1,37 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+}
+
+ol,ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.icon-wrapper {
+    cursor: pointer;
+
+    svg {
+        color: $primary-text;
+
+    }
+}

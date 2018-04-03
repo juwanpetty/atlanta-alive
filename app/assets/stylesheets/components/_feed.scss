@@ -1,0 +1,39 @@
+.main-feed {
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 5rem;
+        padding-right: 2rem;
+
+        &__item {
+            width: 50%;
+            justify-self: end;
+            margin-bottom: 4rem;
+
+            a {
+                display: flex;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .item__content {
+                padding: 1rem 2rem;
+                @include flex(center, space-between);
+
+                p {
+                    color: $secondary-text;
+                    margin: 0;
+                }
+
+                &__location {
+                    color: $secondary-text;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

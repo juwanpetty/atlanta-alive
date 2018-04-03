@@ -1,0 +1,38 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    // .navigation__wrapper
+    &__wrapper {
+        @include flex(center, space-between);
+        width: 100%;
+        height: 64px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    // .navigation__logo
+    &__logo {
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: $primary-text;
+        }
+    }
+
+    // .naivgation__links 
+    &__links {
+        // .navigation__links__item
+        &__item {
+            margin-right: 2rem;
+            color: $secondary-text;
+
+            // .navigation__links__items--last
+            &--last {
+                margin-right: 0;
+            }
+        }
+    }
+}
