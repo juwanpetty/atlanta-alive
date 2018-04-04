@@ -3,22 +3,25 @@
     <% if @photo.image %>
       <%= image_tag @photo.image.url() %>
     <% end %>
-
-    <p>
-      <strong>Title:</strong>
-      <%= @photo.location %>
+    
+    <p class="show__image__location">
+      Star Cafe / <%= @photo.location %>
     </p>
-  
-    <p>
-      <strong>Text:</strong>
+
+      <% if user_signed_in? %>
+        <div class="photo__control">
+          <%= link_to 'Edit', edit_photo_path(@photo) %>
+          <%= link_to 'Delete', photo_path(@photo), class: 'photo__control--delete',
+                                                    method: :delete, 
+                                                    data: {confirm: "Are sure you want to delete this photo?"} %>
+        </div>
+      <% end %>
+    
+    <p class="show__image__description">
+      Perfect for those 4th of July photos! Tip: 
+      the garage is only down when they’re closed 
+      so make sure you go after 5!
       <%= @photo.description %>
     </p>
-
-    <% if user_signed_in? %>
-      <%= link_to 'Back', photos_path() %>
-      <%= link_to 'Edit', edit_photo_path(@photo) %>
-      <%= link_to 'Delete', photo_path(@photo), method: :delete, 
-                                                data: {confirm: "Are sure you want to delete this photo?"} %>
-    <% end %>
   </div>
 </section>
