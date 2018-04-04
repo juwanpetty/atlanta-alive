@@ -5,6 +5,10 @@
     width: 100%;
     pointer-events: none;
 
+    a {
+        pointer-events: auto;
+    }
+
     // .navigation__wrapper
     &__wrapper {
         @include flex(center, space-between);

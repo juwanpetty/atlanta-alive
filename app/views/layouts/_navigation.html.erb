@@ -2,11 +2,11 @@
     <div class="navigation__wrapper">
         
         <% if (params[:controller] == 'photos' && params[:action] == 'show') %>
-            <a href="index.html">
+            <%= link_to(root_path) do %>
                 <div class="icon-wrapper">
                     <i data-feather="arrow-left"></i>
                 </div>
-            </a>
+            <% end %>
         <% else %>
             <div class="navigation__logo">
                 <%= link_to(root_path) do %>
