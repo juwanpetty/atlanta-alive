@@ -5,7 +5,7 @@
     <% end %>
     
     <p class="show__image__location">
-      Star Cafe / <%= @photo.location %>
+      <%= @photo.location %>
     </p>
 
       <% if user_signed_in? %>
@@ -18,9 +18,6 @@
       <% end %>
     
     <p class="show__image__description">
-      Perfect for those 4th of July photos! Tip: 
-      the garage is only down when they’re closed 
-      so make sure you go after 5!
       <%= @photo.description %>
     </p>
   </div>
